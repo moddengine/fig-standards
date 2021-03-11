@@ -17,8 +17,8 @@ interfaces/functionality first.
 
 ## 1.1 Introduction
 
-Creating a standard way of accessing the clock, would allow interopability
-during testing, when testing behavior that has timing based side affects.
+Creating a standard way of accessing the clock, would allow interoperability
+during testing, when testing behavior that has timing based side effects.
 Common ways to get the current time include calling `\time()` or 
 `new DateTimeImmutable('now')` however this makes mocking the current time
 impossible in some situations.
@@ -43,11 +43,11 @@ $timestamp = $clock->now()->getTimestamp();
 
 **Timezone**
 
-Each implmenetation of the `ClockInterface` is free to return the time in the 
-timezone of that library authors choice. This could include but not be limited 
-to return the current PHP timezone (as DateTimeImmutable consructor currently
-does), return a timezone set a the creation of the ClockInterface implementation
-instance, or always returning a fixed timzone (eg UTC).
+Each implementation of the `ClockInterface` is free to return the time in the 
+timezone of that library author's choice. This could include but not be limited 
+to return the current PHP timezone (as DateTimeImmutable constructor currently
+does), return a timezone set at the creation of the ClockInterface implementation
+instance, or always returning a fixed timzone (e.g. UTC).
 
 # 2. Interfaces
 
